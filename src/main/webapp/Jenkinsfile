@@ -24,8 +24,7 @@ pipeline{
         steps{
             //if not approved in 5 days then the buid will be discated
             timeout(time:5,unit:'DAYS'){
-                input message : 'Approval for Production Deployement ?'
-
+                input message: 'Approval for Production Deployement ?'
             }
             build job : 'Deploy_Application_Production_Env'
 
